@@ -17,7 +17,7 @@ public class SessionV6 implements Runnable {
     private final SessionManagerV6 sessionManager;
     private boolean closed = false;
 
-    public SessionV6(Socket socket, DataInputStream input, DataOutputStream output, SessionManagerV6 sessionManager) throws IOException {
+    public SessionV6(Socket socket, SessionManagerV6 sessionManager) throws IOException {
         this.socket = socket;
         this.input = new DataInputStream(socket.getInputStream());
         this.output = new DataOutputStream(socket.getOutputStream());
